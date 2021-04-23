@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midje</title>
+    <style>body { background: rebeccapurple;
+        color: chartreuse;font-family: 'Comic Sans MS', sans-serif; font-size: 1.5rem; word-wrap: break-word; }.weg {display: none }</style>
+            <script type="text/javascript">
+                function hetmag() {
+                   alert('bedank');
+                }
+                  
+                  </script>
+</head>
+<body>
+    <div id=koekje style="background:yellow; color:red; width:100%; height:80vh; position:fixed; bottom:0;left:40px;">
+    <h1>COOKIEBAR!!!!!!!!!!!!!!!!</h1>
+    <span vies-goor-bakje>Wij willen cookies gebruiken om te kijken wie er allemaal naar deze achterlijke site komen, mag dat plz</span> ;). <button style="box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); font-size:1.1rem;padding:200px; border-radius:100%; transform:rotate(45deg);" onclick="hetmag();document.getElementById('koekje').remove()">Best genoch jong</button> <button onclick="document.getElementById('koekje').remove()">Nee oprot'n</button>
+    </div>
+    <div id=betalen class=weg style="background:red; color:yellow; width:100%; height:80vh; position:fixed; bottom:120px;left:60px;">
+        <h1 vies-goor-gakje>BETALEN!!!!!!!!!!!!!!!!</h1>
+        <span vies-goor-bakje>Je zit al 5 seconden op onze site dus nu moet je betalen</span> <button style="box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);padding:200px; border-radius:100%; transform:rotate(45deg);" onclick="window.location = 'princesmaximafonds.nl'"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfa4ffHGMJ-XlRRriRJIc-mJLUNk3kT4Loeg&usqp=CAU"></button><button onclick="document.getElementById('betalen').remove()">nee bedankt</button> 
+        </div>
+    <div id="midje">Midje</div><hr>
+<img src="https://pbs.twimg.com/media/EcbQp_zXsAEPyVt.jpg" height=80><br><marquee direction=right>"<em vies-goor-bakje>Er is een tijd van komen en er is een tijd van gaan. En de tijd van gaan is nu gekomen</em>".</marquee> <span vies-goor-bakje>Rest in Piece</span> &#127866;</p>
+<hr>
+<img src="https://www.mt.nl/wp-content/uploads/res/bruno%20bruins.JPG" height=100><br><marquee direction=right scrollamount="15">"<em vies-goor-bakje>Ik voelde het niet aankomen</em>".</marquee> <span vies-goor-bakje>Rest in Corony</span> &#129440;
+<hr>
+<img src="https://i.imgur.com/1H5VguI.jpg" height=100><br><marquee direction=right scrollamount="20">"<em vies-goor-bakje>Van banaan in je mond, tot kogel door je kont</em>".</marquee> <span vies-goor-bakje>Rest in Amersfoort</span> &#128018;
+<hr>
+<img src="https://denhaagfm.nl/wp-content/uploads/2018/01/eef-hoos.jpg" height=100><br><marquee direction=right scrollamount="50">"<em vies-goor-bakje>En als je niet betaalt, dan k*nkertyfstraal ik je zo het water in!</em>".</marquee> <span vies-goor-bakje>Rest in wanbetalers</span> 💰
+<hr>
+<img src="https://images0.persgroep.net/rcs/t1htIsGXRZUmbwU7ad5wbVrPKdM/diocontent/158780963/_fitwidth/694/?appId=21791a8992982cd8da851550a453bd7f&quality=0.8" height=100><br><marquee direction=right scrollamount="5">"<em vies-goor-bakje>De uil van Minerva spreidt zijn vleugels bij ‘t vallen van de avond.</em>".</marquee> <span vies-goor-bakje>Rest in Extreem-rechts</span> &#10145;
+<div style="background:pink; color: green"><span vies-goor-bakje>ben je nou helemaal geklapt na het zien van deze website! ga dan ook eens naar</span> <a href="https://geklapt.nl?ref=midje">geklapt.nl</a>!</div>
+<div style="background:green; color: pink"><span vies-goor-bakje>altijd al fan geweest va tokies? check dze site</span>  <a href="https://tokkietaal.nl?ref=midje">tokkietaal.nl</a> of <a href="javascript:vertokkie()" style="background: pink; color: darkviolet">vertokkie deze site</a>!</div>
+<div style="background:grey; color: greenyellow"><span vies-goor-bakje>heeft u een klacht over één van onze partnerwebsites, dan meld u dit op</span>  <a href="https://klachtenportaal.ga?ref=midje">klachtenportaal.ga</a>!</div>
+
+<script>
+        (function() {
+            const midje = document.getElementById('midje');
+            const title = document.getElementsByTagName('title')[0];
+            setInterval(() => {
+                midje.innerText += 'e';
+                title.innerText += 'e';
+            }, 100);
+
+            setInterval(() => {
+               document.getElementById('betalen').classList.toggle("weg");
+            }, 6000);
+        })();
+        function vertokkie() {
+            document.querySelectorAll('[vies-goor-bakje]').forEach(item => {
+                fetch('https://tokkietaal.nl/translate.php?t=' + unescape(encodeURIComponent(item.innerText))).then(response => {
+                    response.json().then(d => {
+                        item.innerText = d.text
+                    });
+                });
+            });
+        }
+    </script>
+
+</body>
+</html>
