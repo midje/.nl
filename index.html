@@ -52,7 +52,7 @@
         })();
         function vertokkie() {
             document.querySelectorAll('[vies-goor-bakje]').forEach(item => {
-                fetch('https://tokkietaal.nl/translate.php?t=' + unescape(encodeURIComponent(item.innerText))).then(response => {
+                fetch('https://tokkietaal.nl/translate.php?text=' + unescape(encodeURIComponent(item.innerText))).then(response => {
                     response.json().then(d => {
                         item.innerText = d.text
                     });
