@@ -1,62 +1,88 @@
-
 <!DOCTYPE html>
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Midje</title>
-    <style>body { background: rebeccapurple;
-        color: chartreuse;font-family: 'Comic Sans MS', sans-serif; font-size: 1.5rem; word-wrap: break-word; }.weg {display: none }</style>
-            <script type="text/javascript">
-                function hetmag() {
-                   alert('bedank');
-                }
-                  
-                  </script>
+    <style>
+        body { background: rebeccapurple; color: chartreuse; font-family: 'Comic Sans MS', sans-serif; font-size: 1.5rem; word-wrap: break-word; }
+        #koekje { background:yellow; color:red; width:100%; height:80vh; position:fixed; bottom:0;left:40px; }
+        #betalen { background:red; color:yellow; width:100%; height:30vh; position:fixed; bottom:120px;left:60px; }
+        .weg {display: none }
+        .cookie-btn { box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); font-size:1.1rem;padding:100px; border-radius:100%; transform:rotate(45deg); }
+        .musk-btn { box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);padding:200px; border-radius:100%; transform:rotate(45deg); }
+        .neebdnkt { font-size: 30px; }
+    </style>
+
 </head>
 <body>
-    <div id=koekje style="background:yellow; color:red; width:100%; height:80vh; position:fixed; bottom:0;left:40px;">
+<div id="koekje">
     <h1>COOKIEBAR!!!!!!!!!!!!!!!!</h1>
-    <span vies-goor-bakje>Wij willen cookies gebruiken om te kijken wie er allemaal naar deze achterlijke site komen, mag dat plz</span> ;). <button style="box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); font-size:1.1rem;padding:200px; border-radius:100%; transform:rotate(45deg);" onclick="hetmag();document.getElementById('koekje').remove()">Best genoch jong</button> <button onclick="document.getElementById('koekje').remove()">Nee oprot'n</button>
-    </div>
-    <div id=betalen class=weg style="background:red; color:yellow; width:100%; height:80vh; position:fixed; bottom:120px;left:60px;">
-        <h1 vies-goor-gakje>BETALEN!!!!!!!!!!!!!!!!</h1>
-        <span vies-goor-bakje>Je zit al 5 seconden op onze site dus nu moet je betalen</span> <button style="box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);padding:200px; border-radius:100%; transform:rotate(45deg);" onclick="window.location = 'http://www.muskfoundation.org/'"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfa4ffHGMJ-XlRRriRJIc-mJLUNk3kT4Loeg&usqp=CAU"></button><button onclick="document.getElementById('betalen').remove()">nee bedankt</button> 
-        </div>
-    <div id="midje">Midje</div><hr>
-<img src="https://pbs.twimg.com/media/EcbQp_zXsAEPyVt.jpg" height=80><br><marquee direction=right>"<em vies-goor-bakje>Er is een tijd van komen en er is een tijd van gaan. En de tijd van gaan is nu gekomen</em>".</marquee> <span vies-goor-bakje>Rest in Piece</span> &#127866;</p>
-<hr>
-<img src="https://www.mt.nl/wp-content/uploads/res/bruno%20bruins.JPG" height=100><br><marquee direction=right scrollamount="15">"<em vies-goor-bakje>Ik voelde het niet aankomen</em>".</marquee> <span vies-goor-bakje>Rest in Corony</span> &#129440;
-<hr>
-<img src="https://i.imgur.com/1H5VguI.jpg" height=100><br><marquee direction=right scrollamount="20">"<em vies-goor-bakje>Van banaan in je mond, tot kogel door je kont</em>".</marquee> <span vies-goor-bakje>Rest in Amersfoort</span> &#128018;
-<hr>
-<img src="data:image/jpeg;base64,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" height=100><br><marquee direction=right scrollamount="50">"<em vies-goor-bakje>En als je niet betaalt, dan k*nkertyfstraal ik je zo het water in!</em>".</marquee> <span vies-goor-bakje>Rest in wanbetalers</span> 💰
-<hr>
-<img src="https://images0.persgroep.net/rcs/t1htIsGXRZUmbwU7ad5wbVrPKdM/diocontent/158780963/_fitwidth/694/?appId=21791a8992982cd8da851550a453bd7f&quality=0.8" height=100><br><marquee direction=right scrollamount="5">"<em vies-goor-bakje>De uil van Minerva spreidt zijn vleugels bij ‘t vallen van de avond.</em>".</marquee> <span vies-goor-bakje>Rest in Extreem-rechts</span> &#10145;
-<hr>
-<img src="https://images0.persgroep.net/rcs/yr3RYIpK0bXa-otQvgqnPFtO9_c/diocontent/180518982/_fitwidth/694/?appId=21791a8992982cd8da851550a453bd7f&quality=0.8" height=100><br><marquee direction=right scrollamount="15">"<em vies-goor-bakje>oant moarn</em>".</marquee> <span vies-goor-bakje>oftewel tot morgen</span>
-<hr>
-<img src="https://i.pinimg.com/originals/52/8e/c4/528ec44a628024efb344fefb7bc3d984.png" height=100><br><marquee direction=right scrollamount="20">"<em vies-goor-bakje>My whole life, whether it be long or short, shall be devoted to your service</em>".</marquee> <span vies-goor-bakje>Rest in Corgi</span> &#128021;
-<hr>
-<div style="background:pink; color: green"><span vies-goor-bakje>ben je nou helemaal geklapt na het zien van deze website! ga dan ook eens naar</span> <a href="https://geklapt.midje.nl?ref=midje">GEKLAPT</a>!</div>
-<div style="background:grey; color: greenyellow"><span vies-goor-bakje>heeft u een klacht over één van onze partnerwebsites, dan meld u dit op</span>  <a href="https://klachten.midje.nl?ref=midje">het klachtenportaal</a>!</div>
-<div style="background:black; color: pink"><span vies-goor-bakje>midje.nl icebird-greenchoice &#8482; is een groen initiatief om een blauwe vogel op de kaart te zetten ofzo, </span>  <a href="https://gaathetgoedmetdeijsvogel.nl">zie ons geven om het klimaat!</a>!</div>
-<div style="background:green; color: yellow">Meer een ochtendpersoon? <a href="https://moggeee.nl/">Moggeeeeeee!</a>!</div>
+    <span>Wij willen cookies gebruiken om te kijken wie er allemaal naar deze achterlijke site komen, mag dat plz</span> ;). 
+    <button class="cookie-btn" onclick="alert('bedank');document.getElementById('koekje').remove()">Best genoch jong</button> <button onclick="document.getElementById('koekje').remove()">Nee oprot'n</button>
+</div>
+<div id="betalen" class="weg">
+    <h1>BETALEN!!!!!!!!!!!!!!!!</h1>
+    <span>Je zit al 5 seconden op onze site dus nu moet je betalen</span>
+    <button onclick="document.getElementById('betalen').remove()" class="neebdnkt">nee bedankt</button>
 
+    <button class="musk-btn" onclick="window.location = 'http://www.muskfoundation.org/'">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfa4ffHGMJ-XlRRriRJIc-mJLUNk3kT4Loeg&amp;usqp=CAU" height="120" alt="images">
+    </button>
+</div>
+<div id="midje">
+    Midje
+</div>
+<hr>
+<img src="https://pbs.twimg.com/media/EcbQp_zXsAEPyVt.jpg" height="80" alt="EcbQp_zXsAEPyVt"><br>
+<marquee direction="right">"<em>Er is een tijd van komen en er is een tijd van gaan. En de tijd van gaan is nu gekomen</em>".</marquee> <span>Rest in Piece</span> 🍺
+<hr>
+<img src="https://www.mt.nl/wp-content/uploads/res/bruno%20bruins.JPG" height="100" alt="bruno%20bruins"><br>
+<marquee direction="right" scrollamount="15">"<em>Ik voelde het niet aankomen</em>".</marquee> <span>Rest in Corony</span> 🦠
+<hr>
+<img src="https://i.imgur.com/1H5VguI.jpg" height="100" alt="1H5VguI"><br>
+<marquee direction="right" scrollamount="20">"<em>Van banaan in je mond, tot kogel door je kont</em>".</marquee> <span>Rest in Amersfoort</span> 🐒
+<hr>
+<img src="data:image/jpeg;base64,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" height="100" alt="Z"><br>
+<marquee direction="right" scrollamount="50">"<em>En als je niet betaalt, dan k*nkertyfstraal ik je zo het water in!</em>".</marquee> <span>Rest in wanbetalers</span> 💰
+<hr>
+<img src="https://images0.persgroep.net/rcs/t1htIsGXRZUmbwU7ad5wbVrPKdM/diocontent/158780963/_fitwidth/694/?appId=21791a8992982cd8da851550a453bd7f&amp;quality=0.8" height="100" alt=""><br>
+<marquee direction="right" scrollamount="5">"<em>De uil van Minerva spreidt zijn vleugels bij ‘t vallen van de avond.</em>".</marquee> <span>Rest in Extreem-rechts</span> ➡
+<hr>
+<img src="https://images0.persgroep.net/rcs/yr3RYIpK0bXa-otQvgqnPFtO9_c/diocontent/180518982/_fitwidth/694/?appId=21791a8992982cd8da851550a453bd7f&amp;quality=0.8" height="100" alt=""><br>
+<marquee direction="right" scrollamount="15">"<em>oant moarn</em>".</marquee> <span>oftewel tot morgen</span>
+<hr>
+<img src="https://i.pinimg.com/originals/52/8e/c4/528ec44a628024efb344fefb7bc3d984.png" height="100" alt="528ec44a628024efb344fefb7bc3d984"><br>
+<marquee direction="right" scrollamount="20">"<em>My whole life, whether it be long or short, shall be devoted to your service</em>".</marquee> <span>Rest in Corgi</span> 🐕
+<hr>
+<img src="https://img.noordhollandsdagblad.nl/lJ1QHc9GnPVID6vwhjsWfKta_zM=/960x640/smart/https%3A%2F%2Fcdn-kiosk-api.telegraaf.nl%2Ff1887134-e344-11ed-8d8c-02d2fb1aa1d7.png" height="100" alt="528ec44a628024efb344fefb7bc3d984"><br>
+<marquee direction="right" scrollamount="20">"<em>GOOI DIE HANDJES, DIE HANDJES, DIE HANDJES IN DE LUCHT</em>".</marquee> <span>Rest in Beweging</span> 🚶
+<hr>
+<div style="background:pink; color: green">
+    <span>ben je nou helemaal geklapt na het zien van deze website! ga dan ook eens naar</span> <a href="https://geklapt.midje.nl?ref=midje">GEKLAPT</a>!
+</div>
+<div style="background:grey; color: greenyellow">
+    <span>heeft u een klacht over één van onze partnerwebsites, dan meld u dit op</span> <a href="https://klachten.midje.nl?ref=midje">het klachtenportaal</a>!
+</div>
+<div style="background:black; color: pink">
+    <span>midje.nl icebird-greenchoice ™ is een groen initiatief om een blauwe vogel op de kaart te zetten ofzo,</span> <a href="https://gaathetgoedmetdeijsvogel.nl">zie ons geven om het klimaat!</a>!
+</div>
+<div style="background:green; color: yellow">
+    Meer een ochtendpersoon? <a href="https://moggeee.nl/">Moggeeeeeee!</a>!
+</div>
 <script>
-        (function() {
-            const midje = document.getElementById('midje');
-            const title = document.getElementsByTagName('title')[0];
-            setInterval(() => {
-                midje.innerText += 'e';
-                title.innerText += 'e';
-            }, 100);
+    (function() {
+        const midje = document.getElementById('midje');
+        const title = document.getElementsByTagName('title')[0];
+        setInterval(() => {
+            midje.innerText += 'e';
+            title.innerText += 'e';
+        }, 100);
 
-            setInterval(() => {
-               document.getElementById('betalen').classList.toggle("weg");
-            }, 6000);
-        })();
-    </script>
-
+        setInterval(() => {
+            document.getElementById('betalen').classList.toggle("weg");
+        }, 6000);
+    })();
+</script>
 </body>
 </html>
